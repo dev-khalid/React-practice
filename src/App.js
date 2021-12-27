@@ -1,28 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-
-const element = <h1>something</h1> 
-console.log(element); 
-function App() {
+import React from 'react'
+import ClickCounter from './components/ClickCounter'
+import HoverCounter from './components/HoverCounter'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div><ClickCounter /><HoverCounter/></div>
+  )
 }
 
-export default App;
+export default App
