@@ -1,24 +1,14 @@
-import React from 'react'; 
-import RenderProp from './components/RenderProp';
-import Hello from './components/Hello'
+import React, { useState } from 'react'
+import Counter from './components/Counter'
+
 const App = () => {
-  const welcome = (name) => {
-    return `Welcome ${name}`;
-  };
-  const obj = {
-    name: 'khalid Hossain',
-    welcome: welcome,
-  };
-  console.log(obj); 
+  const [show,setShow] = useState(true); 
   return (
     <div>
-      <RenderProp data={obj} >
-        {
-          data => <Hello data={data}/>
-        }
-      </RenderProp>
+      {show && <Counter />}
+      <button onClick={() => setShow(!show)}>{show ? 'hide' : 'show'}</button>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
